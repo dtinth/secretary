@@ -1,5 +1,7 @@
-import { Box, Button, Container, Typography } from '@mui/joy'
+import { Box, Container, Typography } from '@mui/joy'
 import { useState } from 'react'
+import { FormView } from './FormView'
+import { form } from './forms/sponsor'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,12 +19,7 @@ function App() {
       </Box>
       <Box flex="1" p={2}>
         <Container maxWidth="md">
-          <Typography level="display2">Chart name</Typography>
-          <Typography level="h1">Meow</Typography>
-          <Typography level="body1">okay</Typography>
-          <Button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </Button>
+          <FormView form={form} />
         </Container>
       </Box>
     </Box>
