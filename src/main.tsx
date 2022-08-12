@@ -5,6 +5,8 @@ import { CssVarsProvider } from '@mui/joy'
 import { GlobalStyles } from '@mui/system'
 import './index.css'
 import theme, { Theme } from './theme'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { queryClient } from './packlets/react-query'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -34,7 +36,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           },
         })}
       />
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </CssVarsProvider>
   </React.StrictMode>,
 )

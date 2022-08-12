@@ -12,6 +12,8 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/joy": "^5.0.0-alpha.39",
+    "@tanstack/react-query": "^4.1.0",
+    "firebase": "^9.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
